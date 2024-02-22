@@ -20,6 +20,9 @@ mongoose.connection.on('connected', () => {
 app.use('/api/v1/admin',adminroute);
 app.use('/api/v1/admin/newsportal',newsportal);
 
+app.use('/',(req,res,next)=>{
+    res.status(200).send("jai shree raam")
+} )
 app.listen(port, () => {
     console.log("Server is running on localhost " + port);
 });
